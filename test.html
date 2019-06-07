@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<h1 style="font-size: 50px; margin-left: 1200px;" class="score_index">
+		3
+	</h1>
+	<div class="vopros1 container" style="background-image: url(vopros1.jpg); height: 1000px; background-size: 100% 100%; color: white;">
+		<h1>Название 5 книги в серии Гарри Поттера</h1>
+		<h2 class="otv1">Орден Феникса</h2>
+		<h2 class="otv2">Филосовский камень</h2>
+		<h2 class="otv3">Принц Полукровка</h2>
+	</div>
+	<div class="vopros2 container" style="display: none; background-image: url(vopros2.jpg); height: 1000px; background-size: 100% 100%;color: white;">
+		<h1>Кем приходится Сирриус Блэк к Гарри?</h1>
+		<h2 class="otv4">Дядя</h2>
+		<h2 class="otv5">Крёстный отец</h2>
+		<h2 class="otv6">Двоюродный брат</h2>
+	</div>
+	<div class="vopros3 container" style="display: none; background-image: url(vopros3.jpeg); height: 1000px; background-size: 100% 100%;color: white;">
+		<h1>Как звали актера игравшего Гарри Поттера</h1>
+		<h2 class="otv7">Руперт Гринт</h2>
+		<h2 class="otv8">Рэйф Файнс</h2>
+		<h2 class="otv9">Даниел Редклифф</h2>
+	</div>
+	<div class="priz" style="display: none; background-image: url(prize.jpg); height: 1000px; background-size: 100% 100%;">
+		<a href="index.html">
+			<button class="btn_School btn btn-success">Выйти из игры</button>
+		</a>
+	</div>
+	<script type="text/javascript">
+	let score = 3;
+
+	document.querySelector(".otv1").onclick = function(){
+		alert("Правильно")
+		document.querySelector(".vopros1").style.display = "none";
+		document.querySelector(".vopros2").style.display = "block";
+		score = score+1;
+		document.querySelector(".score_index").innerHTML=score 
+	}
+	document.querySelector(".otv5").onclick = function(){
+		alert("Правильно")
+		document.querySelector(".vopros2").style.display = "none";
+		document.querySelector(".vopros3").style.display = "block";
+		score = score+1;
+		document.querySelector(".score_index").innerHTML=score 
+	}
+	document.querySelector(".otv9").onclick = function(){
+		alert("Поздравляю вы все угадали")
+		document.querySelector(".vopros3").style.display = "none";
+		document.querySelector(".priz").style.display = "block";
+		score = score+1;
+		document.querySelector(".score_index").innerHTML=score 
+	}
+	document.querySelector(".otv2").onclick = function(){
+		alert("Это самая первая книга")
+	}
+	document.querySelector(".otv3").onclick = function(){
+		alert("Это 6 книга")
+	}
+	document.querySelector(".otv4").onclick = function(){
+		alert("Это Вернон Дурсль")
+	}
+	document.querySelector(".otv6").onclick = function(){
+		alert("Это Дадли Дурсль")
+	}
+	document.querySelector(".otv7").onclick = function(){
+		alert("Он играл Рона Уизли")
+	}
+	document.querySelector(".otv8").onclick = function(){
+		alert("Он играл Волан-де-Морта")
+	}
+	</script>
+</body>
+</html>

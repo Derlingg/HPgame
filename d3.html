@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1 style="font-size: 50px; margin-left: 1200px;" class="score_index">
+	6
+</h1>
+</body>
+<div class="vopros1 container" style="background-image: url(hagrid.jpg); height: 1000px; background-size: 100% 100%; color: white;">
+		<h1>Кто сказал Гарри что он волшебник?</h1>	
+		<h2 class="otv1">Хагрид</h2>
+		<h2 class="otv2">Дамблдор</h2>
+		<h2 class="otv3">Вернон</h2>
+	</div>
+	<div class="vopros2 container" style="display: none; background-image: url(gr.jpg); height: 1000px; background-size: 100% 100%;color: white;">
+		<h1>Сколко было факультетов в Хогвардсе?</h1>
+		<h2 class="otv4">3</h2>
+		<h2 class="otv5">4</h2>
+		<h2 class="otv6">5</h2>
+	</div>
+	<div class="vopros3 container" style="display: none; background-image: url(kng.jpg); height: 1000px; background-size: 100% 100%;color: white;">
+		<h1>Чему посвящена седьмая книга?</h1>
+		<h2 class="otv7">Поиску тайной комнаты</h2>
+		<h2 class="otv8">Спасению Сириуса от Волан-де-Моррта</h2>
+		<h2 class="otv9">Поиску кристражей и победой над Волан-де-Мортом</h2>
+	</div>
+	<div class="priz" style="display: none; background-image: url(prize.jpg); height: 1000px; background-size: 100% 100%;">
+		<a href="index.html">
+			<button class="btn_School btn btn-success">Выйти из игры</button>
+		</a>
+	</div>
+<script type="text/javascript">
+let score = 6;
+
+	document.querySelector(".otv1").onclick = function(){
+		alert("Правильно")
+		document.querySelector(".vopros1").style.display = "none";
+		document.querySelector(".vopros2").style.display = "block";
+		score = score+1;
+		document.querySelector(".score_index").innerHTML=score 
+	}
+	document.querySelector(".otv5").onclick = function(){
+		alert("Правильно")
+		document.querySelector(".vopros2").style.display = "none";
+		document.querySelector(".vopros3").style.display = "block";
+		score = score+1;
+		document.querySelector(".score_index").innerHTML=score 
+	}
+	document.querySelector(".otv9").onclick = function(){
+		alert("Поздравляю вы все угадали")
+		document.querySelector(".vopros3").style.display = "none";
+		document.querySelector(".priz").style.display = "block";
+		score = score+1;
+		document.querySelector(".score_index").innerHTML=score 
+	}
+	document.querySelector(".otv2").onclick = function(){
+		alert("Неправильно")
+	}
+	document.querySelector(".otv3").onclick = function(){
+		alert("Неправильно")
+	}
+	document.querySelector(".otv4").onclick = function(){
+		alert("Неправильно")
+	}
+	document.querySelector(".otv6").onclick = function(){
+		alert("Неправильно")
+	}
+	document.querySelector(".otv7").onclick = function(){
+		alert("Неправильно")
+	}
+	document.querySelector(".otv8").onclick = function(){
+		alert("Неправильно")
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container doors">
+		<img src="door.png" class="w-25 door1">
+		<a href="test.html">
+			<img src="door2.png" class="w-25">
+		</a>
+		<a href="d3.html">
+			<img src="door3.png" class="w-25 wdoor2">
+		</a>
+	</div>
+	<div class="School" style="background-image: url(bg.jpg); height: 1000px; background-size: 100% 100%; display: none;">
+		<h1 style="font-size: 50px; color: white;">Помоги Гарри найти его вещи</h1>
+		<h1 style="font-size: 50px; color: white;" class="score_index">
+			0
+		</h1>
+		<a href="index.html">
+			<button class="btn_School btn btn-success">Выйти из игры</button>
+		</a>
+		<img src="mantiya.png" style="width: 100px; position: absolute; margin-left: 600px; margin-top: 400px;" class="mantiya">
+		<img src="metla.png" style="width: 100px; position: absolute;" class="metla">
+		<img src="palochka.png" style="width: 100px; position: absolute; margin-top: 600px; margin-left: 1000px;" class="palochka">
+		<img src="gun.png" style="width: 100px; position: absolute; margin-top: 570px; margin-left: 100px;" class="gun">
+		<img src="ring.png" style="width: 100px; position: absolute; margin-left: 600px; margin-top: 600px;" class="ring">
+	</div>
+<script type="text/javascript">
+	let score = 0;
+
+	document.querySelector(".door1").onclick = function(){
+		alert("Вы попали в Хогвардс")
+		document.querySelector(".doors").style.display = "none";
+		document.querySelector(".School").style.display = "block";
+	}
+
+	document.querySelector(".metla").onclick = function(){
+		document.querySelector(".metla").style.display = "none";
+		score = score+1;
+		document.querySelector(".score_index").innerHTML=score 
+	}
+	document.querySelector(".palochka").onclick = function(){
+		document.querySelector(".palochka").style.display = "none";
+		score = score+1; 
+		document.querySelector(".score_index").innerHTML=score
+	}
+	document.querySelector(".mantiya").onclick = function(){
+		document.querySelector(".mantiya").style.display = "none";
+		score = score+1;
+		document.querySelector(".score_index").innerHTML=score
+	}
+	document.querySelector(".gun").onclick = function(){
+		alert("неправильно")
+	}
+	document.querySelector(".ring").onclick = function(){
+		alert("неправильно")
+	}
+</script>
+</body>
+</html>
